@@ -7,7 +7,8 @@ using UnityEngine.UI;
 public class MenuNavigation : MonoBehaviour
 {
     public static MenuNavigation instance;
-    //to get the username from the previous scene 
+
+    //to get the username
     public static string usernameString = "Anonymous";
     public Text username;
 
@@ -28,10 +29,10 @@ public class MenuNavigation : MonoBehaviour
     {
         SceneManager.LoadScene("Theme");
     }
-    /*public void PlayWithFriends()
+    public void PlayWithFriends()
     {
-        SceneManager.LoadScene();
-    }*/
+        SceneManager.LoadScene("PlayWithFriends");
+    }
     public void Credits()
     {
         SceneManager.LoadScene("Credits");

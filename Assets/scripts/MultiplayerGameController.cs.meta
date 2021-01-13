@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 74fac0b51b018954ba70ec6b9424872c
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - layout: {fileID: 11400000, guid: 8e370fcb6368bac4daf0fd59533cb77f, type: 2}
+  - player1SpawnPosition: {fileID: 6350327101851235354, guid: ebdd68e66989d274c8b001f5793c9c40,
+      type: 3}
+  - player2SpawnPosition: {fileID: 639685079626971591, guid: d2463900d003fe74a99de7c870c68c24,
+      type: 3}
+  - ballSpawnTransform: {fileID: 7687457025778177981, guid: 6d6c8de473dd45f4aa38aaaa3a19bb63,
+      type: 3}
+  - RightWallSpawnPosition: {fileID: 7363250584701074106, guid: 32e7ddd92feff264eb31c0fb848d57ba,
+      type: 3}
+  - LeftWallSpawnPosition: {fileID: 8045176011921726263, guid: a9c7681b9ec1a5041aaf0e4ee3530ef0,
+      type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

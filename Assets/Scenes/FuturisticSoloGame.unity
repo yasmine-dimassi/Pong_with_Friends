@@ -624,7 +624,7 @@ MonoBehaviour:
   inPause: 0
   gameOver: 0
   lifes_remaining_input: 3
-  lifes_remaining: 3
+  lifes_remaining: 0
   lifes_remaining_text: {fileID: 2031262734}
   gameOverPanel: {fileID: 1934700778}
   playPanel: {fileID: 1848994156}

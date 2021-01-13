@@ -6,7 +6,7 @@ public class PlayerControler : MonoBehaviour
 {
 
 
-    public KeyCode moveUp = KeyCode.W;
+    public KeyCode moveUp = KeyCode.Z;
     public KeyCode moveDown = KeyCode.S;
     public float speed = 10.0f;
     public float boundY = 2.25f;

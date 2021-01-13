@@ -13,6 +13,7 @@ public class ThemeController : MonoBehaviour
         //continue
         if (Input.GetKeyDown(KeyCode.Space)) 
         {
+            GameController.theme = theme;
             if (theme == "Futuristic")
             {
                 SceneManager.LoadScene("FuturisticSoloGame");
@@ -28,7 +29,6 @@ public class ThemeController : MonoBehaviour
             else
             {
                 SceneManager.LoadScene("RetroGameSoloGame");
-                GameController.theme = theme;
             }
         }
 
@@ -42,22 +42,22 @@ public class ThemeController : MonoBehaviour
     public void SetFuturisticTheme()
     {
         theme = "Futuristic";
-        print("theme set to " + theme);
+        Debug.Log("theme set to " + theme);
     }
     public void SetChineseTheme()
     {
         theme = "Chinese";
-        print("theme set to " + theme);
+        Debug.Log("theme set to " + theme);
     }
     public void SetTunisianTheme()
     {
         theme = "Tunisian";
-        print("theme set to " + theme);
+        Debug.Log("theme set to " + theme);
     }
     public void SetRetroGameTheme()
     {
         theme = "Retro Game";
-        print("theme set to " + theme);
+        Debug.Log("theme set to " + theme);
     }
 
 }

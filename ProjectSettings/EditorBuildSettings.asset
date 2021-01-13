@@ -5,7 +5,43 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Scenes/Solo_game_elegant.unity
+    path: Assets/Scenes/RetroGameSoloGame.unity
+    guid: 0e2e250982e02974a8805c8bf461dd5d
+  - enabled: 1
+    path: Assets/Scenes/Username.unity
+    guid: b9fdee736a539e941bd8ebe97ff938df
+  - enabled: 1
+    path: Assets/Scenes/PrivateRoom.unity
+    guid: 2364b2ba622e29543ab6d488919d5c5e
+  - enabled: 1
+    path: Assets/Scenes/MultiplayerGame.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/PlayWithFriends.unity
+    guid: 2e0cb3764a044754b93a1ce583bad59d
+  - enabled: 1
+    path: Assets/Scenes/FuturisticSoloGame.unity
     guid: 21133c91d9770aa4193f3950ad890761
+  - enabled: 1
+    path: Assets/Scenes/Credits.unity
+    guid: 286808116d96ad14f997c054dc441251
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 793028bb70e1d75459caf4c6dc7f2a44
+  - enabled: 0
+    path: Assets/Scenes/RandomMatch.unity
+    guid: 5a31df6ae431b2a42b7471fc0dd3bdec
+  - enabled: 1
+    path: Assets/Scenes/Theme.unity
+    guid: 2e1e76b90e8f2384385dee6ead40c32c
+  - enabled: 1
+    path: Assets/Scenes/TunisianSoloGame.unity
+    guid: 00a77ff3bffae5e4ca3d313abf0be15e
+  - enabled: 1
+    path: Assets/Scenes/ChineseSoloGame.unity
+    guid: 20d3a63f78e45b04881139844ddfdaf1
   m_configObjects: {}

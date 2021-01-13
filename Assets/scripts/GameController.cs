@@ -1,8 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameController : MonoBehaviour
 {
@@ -10,10 +8,12 @@ public class GameController : MonoBehaviour
 
     public bool inPlay = false;
     public bool inPause = false;
-    bool gameOver = false;
+    public bool gameOver = false;
 
+    public static string theme;
+
+    public int lifes_remaining_input;
     public int lifes_remaining;
-
     public Text lifes_remaining_text;
 
     [SerializeField] GameObject gameOverPanel;
@@ -21,6 +21,9 @@ public class GameController : MonoBehaviour
     [SerializeField] GameObject pausePanel;
     [SerializeField] GameObject mainMenuPanel;
 
+    [SerializeField] GameObject Heart1;
+    [SerializeField] GameObject Heart2;
+    [SerializeField] GameObject Heart3;
 
     private void Start()
     {
@@ -28,6 +31,7 @@ public class GameController : MonoBehaviour
         playPanel.SetActive(true);
         pausePanel.SetActive(false);
         mainMenuPanel.SetActive(false);
+        lifes_remaining = lifes_remaining_input;
     }
     private void OnEnable()
     {
@@ -36,6 +40,20 @@ public class GameController : MonoBehaviour
 
     private void Update()
     {
+
+        //update lifes UI
+        if (theme == "Retro Game" || theme  == "Chinese")
+        {
+            UpdateHearts();
+        }
+        else
+        {
+            UpdateLifesText();
+        }
+
+        //check if gameover
+        GameOver();
+
         //first time
         if (inPlay == false && gameOver == false)
         {
@@ -57,11 +75,12 @@ public class GameController : MonoBehaviour
                 //update UI
                 gameOverPanel.SetActive(false);
                 playPanel.SetActive(false);
-                lifes_remaining = 3;
-                lifes_remaining_text.text = "3";
 
+                lifes_remaining = lifes_remaining_input;
+   
                 //start the game 
                 gameOver = false;
+                //inPause = false; // this to unpause the ball 
                 inPlay = true;
             }
 
@@ -73,14 +92,13 @@ public class GameController : MonoBehaviour
             PauseGameToggle();
         }
 
-        //check if gameover
-        GameOver();
+
     }
     void GameOver()
     {
         if (!gameOver)
         {
-            if (lifes_remaining <= 0)
+            if (lifes_remaining == 0)
             {
                 //end game
                 gameOver = true;
@@ -95,7 +113,7 @@ public class GameController : MonoBehaviour
 
     public void MainMenu()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene("MainMenu");
     }
 
     public void PauseGameToggle()
@@ -119,6 +137,35 @@ public class GameController : MonoBehaviour
         }
 
     }
+    void UpdateLifesText()
+    {
+        lifes_remaining_text.text = lifes_remaining.ToString();
+        print("text changed");
+    }
+
+    void UpdateHearts()
+    {
+        if (lifes_remaining == 3)
+        {
+            Heart1.SetActive(true);
+            Heart2.SetActive(true);
+            Heart3.SetActive(true);
+        }
+        if (lifes_remaining == 2)
+        {
+            Heart1.SetActive(false);
+        }
+        if (lifes_remaining == 1)
+        {
+            Heart2.SetActive(false);
+        }
+        if (lifes_remaining == 0)
+        {
+            Heart3.SetActive(false);
+        }
+    }
 
 }
+
+
 

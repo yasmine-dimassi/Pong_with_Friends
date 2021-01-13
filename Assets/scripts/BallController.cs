@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class BallController : MonoBehaviour
 {
@@ -18,7 +16,7 @@ public class BallController : MonoBehaviour
         BallRb = GetComponent<Rigidbody2D>();
     }
 
-    void Update()
+    void LateUpdate()
     {
         if (GameController.instance.inPlay == true && GameController.instance.inPause == false)
         {
@@ -30,7 +28,7 @@ public class BallController : MonoBehaviour
                 xSpeed = Random.Range(1f, 2f) * ((Random.Range(0, 2) * 2) - 1);
                 ySpeed = Random.Range(1f, 2f) * ((Random.Range(0, 2) * 2) - 1);
             }
-            MoveBall(); 
+            MoveBall();
         }
        
         if (GameController.instance.inPause == true && GameController.instance.inPlay == true)
@@ -47,12 +45,12 @@ public class BallController : MonoBehaviour
             ballWasUnpaused = false;
         }
 
-
-
     }
 
     void MoveBall()
     {
+        print("lifes remaining : " + GameController.instance.lifes_remaining + "inplay : " + GameController.instance.inPlay);
+
         BallRb.velocity = new Vector2(xSpeed, ySpeed);
     }
 
@@ -102,11 +100,12 @@ public class BallController : MonoBehaviour
         {
             //the player looses a life
             GameController.instance.lifes_remaining--; 
-            GameController.instance.lifes_remaining_text.text = GameController.instance.lifes_remaining.ToString();
+
             //stop the ball
-            setInitSpeed = false;
+            setInitSpeed = false; // to initialise the ball's position 
             BallRb.velocity = Vector2.zero;
             this.transform.position = Vector2.zero;
+
         }
     }
 
@@ -115,11 +114,15 @@ public class BallController : MonoBehaviour
         //stop the ball and save it's velocity
         ballVelocity = BallRb.velocity;
         BallRb.velocity = Vector2.zero;
+
+        print("the ball is paused");
     }
 
     public void UnpauseBall()
     {
         BallRb.velocity = ballVelocity;
+
+        print("the ball is unpaused");
     }
 
 }
