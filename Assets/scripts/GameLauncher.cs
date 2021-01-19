@@ -68,6 +68,12 @@ namespace Photon.Pun.Demo.PunBasics
         {
             PhotonNetwork.AutomaticallySyncScene = true;
         }
+        
+        void destroy(){
+            Debug.Log("DisConnecting from Destroy");
+            PhotonNetwork.Disconnect();
+            }
+            
 
         public void SetPlayerName(string name)
         {
@@ -117,12 +123,14 @@ namespace Photon.Pun.Demo.PunBasics
             }
         }
         public void Return()
-        {
+        {   Debug.Log("DisConnecting from Return");
+            PhotonNetwork.Disconnect();
             SceneManager.LoadScene("PlayWithFriends", LoadSceneMode.Single);
         }
 
         public void MainMenu()
-        {
+        {   Debug.Log("DisConnecting from MainMenu");
+            PhotonNetwork.Disconnect();
             SceneManager.LoadScene("MainMenu", LoadSceneMode.Single);
         }
 
