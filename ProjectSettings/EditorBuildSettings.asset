@@ -9,11 +9,11 @@ EditorBuildSettings:
     path: 
     guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Scenes/RetroGameSoloGame.unity
-    guid: 0e2e250982e02974a8805c8bf461dd5d
-  - enabled: 1
     path: Assets/Scenes/Username.unity
     guid: b9fdee736a539e941bd8ebe97ff938df
+  - enabled: 1
+    path: Assets/Scenes/RetroGameSoloGame.unity
+    guid: 0e2e250982e02974a8805c8bf461dd5d
   - enabled: 1
     path: Assets/Scenes/PrivateRoom.unity
     guid: 2364b2ba622e29543ab6d488919d5c5e
@@ -33,8 +33,8 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 793028bb70e1d75459caf4c6dc7f2a44
   - enabled: 0
-    path: Assets/Scenes/RandomMatch.unity
-    guid: 5a31df6ae431b2a42b7471fc0dd3bdec
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/Theme.unity
     guid: 2e1e76b90e8f2384385dee6ead40c32c
